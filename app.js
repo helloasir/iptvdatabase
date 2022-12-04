@@ -114,3 +114,5 @@ app.get('/', function(req, res,next) {
   app.listen(port, "0.0.0.0", function() {
   console.log(`IPTV app listening on port ${port}`)
 })
+
+module.exports = app;
