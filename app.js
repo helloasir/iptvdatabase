@@ -9,7 +9,9 @@ const exphbs = require('express-handlebars')
 
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use("/css", express.static(path.join(__dirname, "node_modules/bootstrap/dist/css"))); // <- This will use the contents of 'bootstrap/dist/css' which is placed in your node_modules folder as if it is in your '/styles/css' directory.
+app.use("/css", express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")));
+app.use("/js", express.static(path.join(__dirname, "node_modules/bootstrap/dist/js")));
+app.use("/ps", express.static(path.join(__dirname, "node_modules/@popperjs/core/dist/umd"))); // <- This will use the contents of 'bootstrap/dist/css' which is placed in your node_modules folder as if it is in your '/styles/css' directory.
 
 
 // Initialize built-in middleware for urlencoding and json
@@ -61,7 +63,7 @@ app.get('/', function(req, res,next) {
   });
   
   //(/data/search/isbn)
-  app.get('/data/search/isbn', (req, res) => {
+  app.get('/data/search/iptv', (req, res) => {
   
     res.render('searchform');
   })
