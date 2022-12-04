@@ -3,7 +3,7 @@ const app = express()
 const port = process.env.PORT || 5000
 const path = require('path');
 const exphbs = require('express-handlebars');
-const { url } = require('inspector');
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
