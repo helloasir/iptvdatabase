@@ -110,5 +110,5 @@ app.get('/', function(req, res,next) {
   
   });
   app.listen(port, "0.0.0.0", function() {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`IPTV app listening on port ${port}`)
 })
