@@ -109,6 +109,6 @@ app.get('/', function(req, res,next) {
     res.render('titledata', { data: bookArray, hasBook: (bookArray.length > 0)});  
   
   });
-app.listen(port, () => {
+  app.listen(port, "0.0.0.0", function() {
   console.log(`Example app listening on port ${port}`)
 })
